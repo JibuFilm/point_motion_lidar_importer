@@ -14,7 +14,7 @@ This tool is part of an ongoing art project. More at [jibujin.com](https://jibuj
 
 ## About
 
-Point Motion LiDAR Importer bridges raw LiDAR sensor recordings into Blender's cinematic environment — enabling free camera work, lighting, and rendering over real captured geometry.
+Point Motion LiDAR Importer bridges raw LiDAR sensor recordings into Blender's environment. It enables free camera work, lighting, and rendering over real captured geometry.
 
 The pipeline decodes Ouster PCAP recordings frame by frame using the Ouster SDK, exports per-frame PLY geometry, and loads them as a just-in-time animated sequence inside Blender — all from a single button in the viewport.
 
@@ -25,9 +25,8 @@ Ouster SDK decode
      ↓
 Per-frame PLY export
      ↓
-Blender animated point cloud sequence
-     ↓
-Cinematic camera
+Blender animated point cloud sequencer
+
 ```
 
 ---
