@@ -1,49 +1,109 @@
 # Point Motion LiDAR Importer
-### A Blender Add-on by JibuFilm
 
-Import LiDAR PCAP recordings directly into Blender as animated point cloud sequences.
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+*This project and its outputs are shared under Creative Commons — non-commercial use only. See license below.*
+
+An on-go Blender add-on project by **JibuFilm** that imports Ouster LiDAR PCAP recordings directly into Blender as animated point cloud sequences.
+
+*See description below for Contribution and currently supports*
+
+This tool is part of an ongoing art project. More at [jibujin.com](https://jibujin.com) *(site under construction)*
 
 ---
 
-## What it does
+## About
 
-- Select a `.pcap` file — JSON metadata is auto-detected from the same folder
-- Decodes all frames using Ouster SDK
-- Exports PLY frames to a folder named after the PCAP
-- Loads them as a just-in-time animated sequence in Blender
-- Applies Point Cloud geometry nodes automatically (renderable in Cycles)
-- Timeline is set to match your recording length
+Point Motion LiDAR Importer bridges raw LiDAR sensor recordings into Blender's cinematic environment — enabling free camera work, lighting, and rendering over real captured geometry.
+
+The pipeline decodes Ouster PCAP recordings frame by frame using the Ouster SDK, exports per-frame PLY geometry, and loads them as a just-in-time animated sequence inside Blender — all from a single button in the viewport.
+
+```
+PCAP + JSON
+     ↓
+Ouster SDK decode
+     ↓
+Per-frame PLY export
+     ↓
+Blender animated point cloud sequence
+     ↓
+Cinematic camera
+```
+
+---
+
+## ⚠️ Disclaimer
+
+**This project is in early experimental / alpha development. Expect breaking changes.**
+
+**Currently only tested on:**
+- macOS 11.0+ (Apple Silicon / ARM64)
+- CPython 3.11
+- Blender 4.2+
+- Ouster SDK 0.16.1
+
+**Sensor support:**
+This add-on uses the Ouster SDK for decoding and has only been tested with Ouster LiDAR sensors (OS0, OS1, OS2, OSDome). The PCAP format is universal, but the decoding pipeline is Ouster-specific. Other manufacturers (Velodyne, Livox, Hesai) use different packet formats and would require their own SDK integration.
+
+**Contributions welcome:**
+Support for additional platforms (Windows, Linux, Intel macOS) and other LiDAR manufacturers is not yet implemented. Pull requests and issues are encouraged.
+
+Use at your own risk.
+
+---
+
+## Requirements
+
+- Blender 4.2+
+- Ouster SDK 0.16.1 wheel (see Installation)
+- PCAP and JSON metadata files from an Ouster sensor — both files must share the same name and be in the same folder
 
 ---
 
 ## Installation
 
-1. Download `ouster-sdk` wheel for macOS arm64:
+1. Download the Ouster SDK wheel for your platform:
 ```bash
 pip download ouster-sdk==0.16.1 --dest ./wheels --only-binary=:all: \
   --python-version=3.11 --platform=macosx_11_0_arm64
 ```
 
-2. Place the `.whl` file in the `wheels/` folder and uncomment the line in `blender_manifest.toml`
+2. Place the `.whl` file inside the `wheels/` folder
 
-3. Zip the entire `point_motion_lidar_importer/` folder
+3. Uncomment the wheels line in `blender_manifest.toml`:
+```toml
+wheels = [
+  "./wheels/ouster_sdk-0.16.1-cp311-cp311-macosx_11_0_arm64.whl",
+]
+```
 
-4. Blender → Edit → Preferences → Add-ons → Install → select the zip → Enable
+4. Zip the entire `point_motion_lidar_importer/` folder
+
+5. Blender → Edit → Preferences → Add-ons → Install → select the zip → Enable
+
+6. Open the **N panel** in the 3D viewport → **LiDAR** tab
 
 ---
 
 ## Usage
 
-- Open the **N panel** in the 3D viewport → **LiDAR** tab
-- Click **Import PCAP + JSON** → select your `.pcap` file
-- The add-on decodes and animates automatically
-- Or use **Load PLY Sequence** if you've already decoded
+**Import from PCAP:**
+1. LiDAR panel → **Import PCAP + JSON**
+2. Select your `.pcap` file — the matching `.json` is detected automatically
+3. The add-on decodes all frames, exports PLYs, and animates the sequence
+4. Timeline is set automatically to match your recording length
+
+**Load existing PLY sequence:**
+- If you've already decoded a PCAP, use **Load PLY Sequence** to load the folder directly without re-decoding
+
+**SDK status:**
+The LiDAR panel shows a ✓ or ✗ indicator confirming whether ouster-sdk was found correctly.
 
 ---
 
 ## Credits
 
-Sequence loading approach inspired by:
+Sequence loading approach inspired by
 [blender-sequence-loader](https://github.com/InteractiveComputerGraphics/blender-sequence-loader) (MIT License)
 © InteractiveComputerGraphics
 
@@ -53,4 +113,11 @@ LiDAR decoding powered by [Ouster SDK](https://github.com/ouster-lidar/ouster-ro
 
 ## License
 
-MIT
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — Creative Commons Attribution-NonCommercial 4.0 International
+
+Free to use, modify, and share for non-commercial purposes with credit to JibuFilm.
+Commercial use requires explicit permission from JibuFilm.
+
+---
+
+*Part of an ongoing art project by JibuFilm — [jibujin.com](https://jibujin.com)*
