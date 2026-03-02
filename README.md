@@ -4,7 +4,7 @@
 
 *This project and its outputs are shared under Creative Commons — non-commercial use only. See license below.*
 
-An on-go Blender add-on project by **JibuFilm** that imports Ouster LiDAR PCAP recordings directly into Blender as animated point cloud sequences.
+An on-go Blender add-on project by **JibuFilm** that imports Ouster LiDAR PCAP recordings into Blender as animated point cloud sequences.
 
 *See description below for Contribution and currently supports*
 
@@ -14,9 +14,9 @@ This tool is part of an ongoing art project. More at [jibujin.com](https://jibuj
 
 ## About
 
-Point Motion LiDAR Importer bridges raw LiDAR sensor recordings into Blender's environment. It enables free camera work, lighting, and rendering over real captured geometry.
+Point Motion LiDAR Importer enables the importing of raw LiDAR sensor recordings into Blender's environment. It enables free camera work, lighting, and rendering.
 
-The pipeline decodes Ouster PCAP recordings frame by frame using the Ouster SDK, exports per-frame PLY geometry, and loads them as a just-in-time animated sequence inside Blender — all from a single button in the viewport.
+The pipeline decodes Ouster PCAP recordings frame by frame using the Ouster SDK, exports per-frame PLY geometry, and loads them as a just-in-time animated sequence inside Blender.
 
 ```
 PCAP + JSON
@@ -35,14 +35,14 @@ Blender animated point cloud sequencer
 
 **This project is in early experimental / alpha development. Expect breaking changes.**
 
-**Currently only tested on:**
+**Currently testing on:**
 - macOS 11.0+ (Apple Silicon / ARM64)
 - CPython 3.11
 - Blender 4.2+
 - Ouster SDK 0.16.1
 
 **Sensor support:**
-This add-on uses the Ouster SDK for decoding and has only been tested with Ouster LiDAR sensors (OS0, OS1, OS2, OSDome). The PCAP format is universal, but the decoding pipeline is Ouster-specific. Other manufacturers (Velodyne, Livox, Hesai) use different packet formats and would require their own SDK integration.
+This add-on uses the Ouster SDK for decoding and has only been tested with Ouster LiDAR sensors (OS0, OS1, OS2, OSDome). The PCAP format is universal, but the decoding pipeline is Ouster-specific. Other manufacturers use different packet formats and would require their own SDK integration.
 
 **Contributions welcome:**
 Support for additional platforms (Windows, Linux, Intel macOS) and other LiDAR manufacturers is not yet implemented. Pull requests and issues are encouraged.
@@ -55,7 +55,7 @@ Use at your own risk.
 
 - Blender 4.2+
 - Ouster SDK 0.16.1 wheel (see Installation)
-- PCAP and JSON metadata files from an Ouster sensor — both files must share the same name and be in the same folder
+- PCAP and JSON metadata files from an Ouster sensor *Both files must share the same name and be in the same folder
 
 ---
 
