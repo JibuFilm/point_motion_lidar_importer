@@ -35,17 +35,30 @@ The add-on decodes PCAP recordings using the Ouster SDK, exports per-frame PLY f
 
 **Early experimental / alpha development. Breaking changes may occur.**
 
-Currently only tested on:
+Currently only testing on:
 - macOS 11.0+ (Apple Silicon / ARM64)
 - CPython 3.11
 - Blender 4.2+
 - Ouster SDK 0.16.1
 
----
+This add-on is under active development and debugging. Viewport playback works as intended, but there are known issues with rendering and persistence.
+
+### ⚠️ Known Issues
+1) **Render Animation does not work correctly**
+   - Viewport animation plays correctly.
+   - During render, extra mesh/geometry appears on top.
+   - Long renders may fail to sequence the `.ply` frames reliably (frame loading/advancing breaks).
+
+2) **Session persistence**
+   - After reopening the `.blend`, the PLY sequence must be imported again (the sequence path/state is not persisted yet).
+
+### Help Appreciated 
+If you have experience with Blender add-ons / Geometry Nodes / file handlers for image sequences, contributions and debugging suggestions are very welcome.
+
 
 ## Sensor Support
 
-Tested with Ouster LiDAR sensors: OS0, OS1, OS2, OSDome.
+Testing with Ouster LiDAR sensors Outputs: OS0, OS1, OS2, OSDome.
 
 Decoding is Ouster-specific via the Ouster SDK. Other manufacturers (Velodyne, Livox, Hesai) use different packet formats and require separate SDK integration. Contributions welcome.
 
