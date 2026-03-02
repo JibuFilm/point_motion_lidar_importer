@@ -122,13 +122,13 @@ LiDAR decoding powered by [Ouster SDK](https://github.com/ouster-lidar/ouster-ro
 
 ## License
 
-[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — Creative Commons Attribution-NonCommercial 4.0 International
+GNU General Public License v3.0 or later (GPL-3.0-or-later)
 
-Free to use, modify, and share for non-commercial purposes with credit to JibuFilm.
-Commercial use requires explicit permission from JibuFilm.
+You may use, modify, and redistribute under GPL terms. Modified versions
+must remain GPL-licensed.
 
-> Note: `blender_manifest.toml` declares `GPL-3.0-or-later` for Blender extension platform compatibility. The actual license governing this project and its use is CC BY-NC 4.0 as stated above.
+JibuFilm Part of an
+ongoing art project of jibujin.com
+
 
 ---
-
-*Part of an ongoing cinematic research project by JibuFilm — [jibujin.com](https://jibujin.com)*
