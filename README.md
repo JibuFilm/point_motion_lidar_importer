@@ -43,14 +43,11 @@ Currently only testing on:
 
 This add-on is under active development and debugging. Viewport playback works as intended, but there are known issues with rendering and persistence.
 
-### ⚠️ Known Issues
-1) **Render Animation does not work correctly**
-   - Viewport animation plays correctly.
-   - During render, extra mesh/geometry appears on top.
-   - Long renders may fail to sequence the `.ply` frames reliably (frame loading/advancing breaks).
+### Known Issue 
 
-2) **Session persistence**
-   - After reopening the `.blend`, the PLY sequence must be imported again (the sequence path/state is not persisted yet).
+
+ **Session persistence**
+   - After reopening the `.blend`, the PLY sequence must be imported again (the sequence path/state is not persisted yet), and an extra stationed mesh would be left on top cuasing render animation problem.
 
 ### Help Appreciated 
 If you have experience with Blender add-ons / Geometry Nodes / file handlers for image sequences, contributions and debugging suggestions are very welcome.
