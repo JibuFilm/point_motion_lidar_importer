@@ -33,7 +33,12 @@ The add-on decodes PCAP recordings using the Ouster SDK, exports per-frame PLY f
 
 ## ⚠️ Development Status
 
-**Early experimental / alpha development. Breaking changes may occur.**
+**Early experimental / alpha development. Breaking changes may occur.** 
+
+New Features Testing:
+- Activitly solving session persistancy
+- auto-load ply sequence after decoding .pcap
+
 
 Currently only testing on:
 - macOS 11.0+ (Apple Silicon / ARM64)
@@ -47,7 +52,7 @@ This add-on is under active development.
 
 **Camera View Must Be Locked for Successful Render**‼️
 
- **Session persistence**
+ **Session persistence** (working on additional modules to solve this)
    - After reopening the `.blend`, the PLY sequence must be imported again (the sequence path/state is not persisted yet), and an extra stationed mesh would be left on top cuasing render animation problem.
 
 ### Help Appreciated 
