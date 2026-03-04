@@ -35,7 +35,12 @@ The add-on decodes PCAP recordings using the Ouster SDK, exports per-frame PLY f
 
 **Early experimental / alpha development. Breaking changes may occur.** 
 
-Currently experimenting with a new feature for cropping geometry across the entire point cloud sequence
+Currently experimenting with new features
+
+- cropping geometry across the entire point cloud sequence
+- multi sensors input support
+- osf file import
+
 
 **Camera View Must Be Locked for Successful Render**‼️
 
