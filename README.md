@@ -41,10 +41,11 @@ Currently only testing on:
 - Blender 4.2+
 - Ouster SDK 0.16.1
 
-This add-on is under active development and debugging. Viewport playback works as intended, but there are known issues with rendering and persistence.
+This add-on is under active development and debugging. Viewport playback works as intended. 
 
 ### Known Issue 
 
+**Camera View Must Be Locked for Successful Render**‼️
 
  **Session persistence**
    - After reopening the `.blend`, the PLY sequence must be imported again (the sequence path/state is not persisted yet), and an extra stationed mesh would be left on top cuasing render animation problem.
