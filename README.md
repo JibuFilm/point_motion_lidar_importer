@@ -41,7 +41,7 @@ Currently only testing on:
 - Blender 4.2+
 - Ouster SDK 0.16.1
 
-This add-on is under active development and debugging. Viewport playback works as intended. 
+This add-on is under active development. 
 
 ### Known Issue 
 
