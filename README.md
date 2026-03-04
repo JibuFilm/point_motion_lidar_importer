@@ -39,9 +39,10 @@ Currently experimenting with a new feature for cropping geometry across the enti
 
 **Camera View Must Be Locked for Successful Render**‼️
 
-**V1.1.0 New Features**
-- ASession persistancy
+**V1.1.0**
+- A Session persistancy problem resloved
 - auto-load ply sequence after decoding .pcap
+- back up function added
 
 
 Currently only testing on:
