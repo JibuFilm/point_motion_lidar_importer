@@ -35,8 +35,12 @@ The add-on decodes PCAP recordings using the Ouster SDK, exports per-frame PLY f
 
 **Early experimental / alpha development. Breaking changes may occur.** 
 
-New Features Testing:
-- Activitly solving session persistancy
+Currently experimenting with a new feature for cropping geometry across the entire point cloud sequence
+
+**Camera View Must Be Locked for Successful Render**‼️
+
+**V1.1.0 New Features**
+- ASession persistancy
 - auto-load ply sequence after decoding .pcap
 
 
@@ -50,10 +54,6 @@ This add-on is under active development.
 
 ### Known Issue 
 
-**Camera View Must Be Locked for Successful Render**‼️
-
- **Session persistence** (working on additional modules to solve this)
-   - After reopening the `.blend`, the PLY sequence must be imported again (the sequence path/state is not persisted yet), and an extra stationed mesh would be left on top cuasing render animation problem.
 
 ### Help Appreciated 
 If you have experience with Blender add-ons / Geometry Nodes / file handlers for image sequences, contributions and debugging suggestions are very welcome.
