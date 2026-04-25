@@ -12,10 +12,12 @@ This tool is part of an art project exploring LiDAR as a cinematic medium. More 
 
 Point Motion LiDAR Importer enables importing raw Ouster LiDAR recordings into Blender for time-based point cloud visualization. It supports:
 
-- Free camera navigation
-- Lighting and rendering inside Blender
+- Multi-sensor recordings
+- Reflectivity/Near-IR/Range attribute import
+- Auto Blender Sequence Configurations for Point-Cloud
+- Auto detect Ouster sensor meta-data for Blender Configs
+- Free camera navigation, lighting and renderin inside Blender
 - Frame-by-frame animated point cloud playback
-- Just-in-time loading of decoded geometry
 
 ```
 PCAP + JSON
@@ -27,42 +29,15 @@ Per-frame PLY export
 Blender animated point cloud sequence
 ```
 
-The add-on decodes PCAP recordings using the Ouster SDK, exports per-frame PLY files, and loads them as an animated sequence inside Blender.
+The add-on decodes PCAP/Osf recordings using the Ouster SDK, exports per-frame PLY files, and loads them as an animated sequence inside Blender.
 
 ---
-
-## ⚠️ Development Status
-
-**Early experimental / alpha development. Breaking changes may occur.** 
-
-Currently experimenting with new features
-
-- cropping geometry across the entire point cloud sequence (done, testing)
-- multi sensors input support (done, testing)
-- osf file import (done, trying to translate color attribute to blender)
-
-
-**Camera View Must Be Locked for Successful Render**‼️
-
-**V1.1.0**
-- A Session persistancy problem resloved
-- auto-load ply sequence after decoding .pcap
-- back up function added
-
-
-Currently only testing on:
-- macOS 11.0+ (Apple Silicon / ARM64)
-- CPython 3.11
-- Blender 4.2+
-- Ouster SDK 0.16.1
-
-This add-on is under active development. 
 
 ### Known Issue 
 
 
 ### Help Appreciated 
-If you have experience with Blender add-ons / Geometry Nodes / file handlers for image sequences, contributions and debugging suggestions are very welcome.
+If you have experience with [traversal verification for speculative tree decoding] your helf would appreciated for the next stage of Point Motion development
 
 
 ## Sensor Support
