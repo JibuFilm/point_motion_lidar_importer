@@ -1,9 +1,9 @@
 schema_version = "1.0.0"
 
 id = "point_motion_lidar_importer"
-version = "1.1.0"
+version = "1.0.0"
 name = "Point Motion LiDAR Importer"
-tagline = "PCAP to Blender point cloud sequence — by JibuFilm"
+tagline = "Import Ouster LiDAR PCAP/OSF captures as animated point-cloud sequences"
 maintainer = "JibuFilm"
 type = "add-on"
 
@@ -34,7 +34,6 @@ wheels = [
   "./wheels/psutil-5.9.8-cp38-abi3-macosx_11_0_arm64.whl",
   "./wheels/requests-2.32.5-py3-none-any.whl",
   "./wheels/ruamel_yaml-0.19.1-py3-none-any.whl",
-  "./wheels/threadpoolctl-3.6.0-py3-none-any.whl",
   "./wheels/typing_extensions-4.15.0-py3-none-any.whl",
   "./wheels/urllib3-2.6.3-py3-none-any.whl",
   "./wheels/waitress-3.0.0-py3-none-any.whl",
@@ -45,5 +44,5 @@ wheels = [
 ]
 
 [permissions]
-files = "Allow reading PCAP and JSON files, writing PLY frames"
+files = "Read PCAP, OSF, JSON, TAR files; write PLY frames and extracted metadata"
 network = "Required by ouster-sdk for sensor discovery"
