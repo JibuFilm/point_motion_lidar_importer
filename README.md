@@ -12,6 +12,7 @@ This tool is part of an art project exploring LiDAR as a cinematic medium. More 
 
 Point Motion LiDAR Importer enables importing raw Ouster LiDAR recordings into Blender for time-based point cloud visualization. It supports:
 
+- Frame based lidar data animation inside of Blender
 - Multi-sensor recordings
 - Reflectivity/Near-IR/Range attribute import
 - Auto Blender Sequence Configurations for Point-Cloud
@@ -58,7 +59,9 @@ Decoding is Ouster-specific via the Ouster SDK. Other manufacturers (Velodyne, L
 
 ## Installation
 
-**1. Download all required wheels** (macOS ARM64, Python 3.11):
+**1. Download all required wheels** ⚠️ please check blender_manifest.toml for the lastes required wheels, different wheels might be required for different devices, please download the Ouster SDK that supports your OWN PLATFORM:
+
+*reference only
 
 ```bash
 pip download ouster-sdk==0.16.1 rosbags blinker certifi \
